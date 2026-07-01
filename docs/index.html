@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Minecraft For Honor Hispano</title>
+  <meta name="description" content="Servidor oficial de Minecraft de la comunidad For Honor Hispano.">
+  <style>
+    :root {
+      --bg: #0b1220;
+      --bg-soft: #121b2e;
+      --card: #17233a;
+      --text: #f4f7fb;
+      --muted: #b8c3d9;
+      --accent: #ff6b00;
+      --accent-2: #3ccf91;
+      --line: #2a3b5f;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Ubuntu", "Noto Sans", sans-serif;
+      background:
+        radial-gradient(1200px 500px at 10% -10%, #1d2f4f 0%, transparent 60%),
+        radial-gradient(900px 400px at 90% 0%, #3b1f16 0%, transparent 55%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    .wrap {
+      width: min(1050px, 92vw);
+      margin: 0 auto;
+      padding: 2.5rem 0 4rem;
+    }
+
+    .hero {
+      background: linear-gradient(130deg, rgba(255,107,0,0.18), rgba(60,207,145,0.13));
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 15px 50px rgba(0,0,0,0.35);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(1.7rem, 3.8vw, 2.6rem);
+      letter-spacing: 0.4px;
+    }
+
+    .sub {
+      margin-top: 0.8rem;
+      color: var(--muted);
+      font-size: 1.03rem;
+      max-width: 70ch;
+    }
+
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      margin-top: 1.2rem;
+    }
+
+    .badge {
+      background: var(--bg-soft);
+      border: 1px solid var(--line);
+      color: var(--text);
+      padding: 0.45rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.92rem;
+      white-space: nowrap;
+    }
+
+    .grid {
+      margin-top: 1.3rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 0.9rem;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 1rem;
+    }
+
+    .card h2 {
+      margin: 0 0 0.5rem;
+      font-size: 1.05rem;
+      color: var(--accent-2);
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .section {
+      margin-top: 1.7rem;
+      background: rgba(14,21,35,0.82);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 1.2rem;
+    }
+
+    .section h3 {
+      margin-top: 0;
+      font-size: 1.12rem;
+    }
+
+    ul {
+      margin: 0.5rem 0 0;
+      padding-left: 1.1rem;
+    }
+
+    li { margin: 0.42rem 0; }
+
+    a {
+      color: #8fd1ff;
+      text-decoration-thickness: 1.2px;
+      text-underline-offset: 2px;
+    }
+
+    a:hover { color: #c6e7ff; }
+
+    .ip {
+      display: inline-block;
+      margin-top: 0.45rem;
+      background: #101a2b;
+      border: 1px dashed #44679a;
+      border-radius: 10px;
+      padding: 0.5rem 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.2px;
+    }
+
+    .footer {
+      margin-top: 1.5rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .tags {
+      margin-top: 0.45rem;
+      color: #9bb6dc;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <h1>Minecraft For Honor Hispano</h1>
+      <p class="sub">Servidor dedicado para la comunidad, con eventos, competitivo y un punto de encuentro para jugar juntos.</p>
+      <div class="badges">
+        <span class="badge">Minecraft Fabric 1.20.1</span>
+        <span class="badge">Dockerized Server</span>
+        <span class="badge">Comunidad For Honor Hispano</span>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <h2>Servidor</h2>
+          <p>Conecta desde Java Edition usando la IP publica de la comunidad.</p>
+          <span class="ip">minecraft.forhonorhispano.com</span>
+        </article>
+        <article class="card">
+          <h2>Torneos</h2>
+          <p>Apuntate a los eventos competitivos y demuestra tu habilidad en la arena.</p>
+        </article>
+        <article class="card">
+          <h2>Comunidad</h2>
+          <p>Discord, Steam, web y Twitch para mantenerte al dia de partidas y novedades.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h3>Unete a nuestra comunidad</h3>
+      <ul>
+        <li>Discord (entra y participa): <a href="https://discord.gg/GYY89fHv75" target="_blank" rel="noopener noreferrer">https://discord.gg/GYY89fHv75</a></li>
+        <li>Comunidad de Steam: <a href="https://steamcommunity.com/groups/forhonorhispano" target="_blank" rel="noopener noreferrer">https://steamcommunity.com/groups/forhonorhispano</a></li>
+        <li>Web oficial: <a href="https://forhonorhispano.com" target="_blank" rel="noopener noreferrer">https://forhonorhispano.com</a></li>
+        <li>Directos en Twitch: <a href="https://twitch.tv/forhonorhispano" target="_blank" rel="noopener noreferrer">https://twitch.tv/forhonorhispano</a></li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h3>Torneos y competitivo</h3>
+      <ul>
+        <li>Nuestro perfil en Battlefy: <a href="https://battlefy.com/for-honor-hispano" target="_blank" rel="noopener noreferrer">https://battlefy.com/for-honor-hispano</a></li>
+        <li>1er TORNEO (Forja del Primer Campeon): Enlace al Torneo</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h3>Apoya los proyectos</h3>
+      <p>Todo este ecosistema (web, servidores, dominios) se mantiene gracias a la comunidad.</p>
+      <ul>
+        <li>Bote de PayPal (mejoras del servidor): <a href="https://www.paypal.com/pool/9quGCGhQ8r?sr=wccr" target="_blank" rel="noopener noreferrer">https://www.paypal.com/pool/9quGCGhQ8r?sr=wccr</a></li>
+      </ul>
+    </section>
+
+    <p class="footer">Repositorio del servidor: <a href="https://github.com/joseangelalejo/forhonorhispanominecraft" target="_blank" rel="noopener noreferrer">forhonorhispanominecraft</a></p>
+    <p class="tags">#ForHonor #ForHonorHispano #Gaming #Torneos #Minecraft #ComunidadGaming</p>
+  </main>
+</body>
+</html>

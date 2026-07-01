@@ -55,6 +55,7 @@ env/
 data/logs/
 data/config/
 data/crash-reports/
+data/dynmap/
 data/forhonorhispano/
 data/.cache/
 data/.local/

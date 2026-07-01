@@ -1,0 +1,49 @@
+services:
+  mc:
+    image: ${MC_IMAGE:-itzg/minecraft-server:latest}
+    container_name: ${MC_CONTAINER_NAME:-minecraft-server}
+    tty: true
+    stdin_open: true
+    restart: always
+    ports:
+      - "${MC_PORT_TCP:-25565}:25565"
+      - "${MC_PORT_UDP_BEDROCK:-19133}:19133/udp"
+      - "${MC_RCON_PORT:-25575}:25575"
+    environment:
+      EULA: "${EULA:-TRUE}"
+      TYPE: "${TYPE:-FABRIC}"
+      VERSION: "${VERSION:-1.20.1}"
+      MEMORY: "${MEMORY:-7G}"
+      MOTD: "${MOTD:-A For Honor RPG Server}"
+      ONLINE_MODE: "${ONLINE_MODE:-false}"
+      USE_AIKAR_FLAGS: "${USE_AIKAR_FLAGS:-true}"
+      USE_MEOWICE_FLAGS: "${USE_MEOWICE_FLAGS:-true}"
+      FORCE_GAMEMODE: "${FORCE_GAMEMODE:-true}"
+      SIMULATION_DISTANCE: "${SIMULATION_DISTANCE:-10}"
+      VIEW_DISTANCE: "${VIEW_DISTANCE:-10}"
+      LEVEL: "${LEVEL:-forhonorhispano}"
+      SPAWN_PROTECTION: "${SPAWN_PROTECTION:-180}"
+      OPS: |-
+        ${OPS:-MiniatureMistery}
+
+      ENABLE_RCON: "${ENABLE_RCON:-true}"
+      RCON_PASSWORD: "${RCON_PASSWORD}"
+      RCON_PORT: "${MC_RCON_PORT:-25575}"
+      RCON_CMDS_STARTUP: |-
+        ${RCON_CMDS_STARTUP:-say Server iniciado, esperando jugadores...}
+      RCON_CMDS_ON_CONNECT: |-
+        ${RCON_CMDS_ON_CONNECT:-say Bienvenido al server, %player%!}
+      RCON_CMDS_FIRST_CONNECT: |-
+        ${RCON_CMDS_FIRST_CONNECT:-forceload add -500 -500 500 500}
+      RCON_CMDS_LAST_DISCONNECT: |-
+        ${RCON_CMDS_LAST_DISCONNECT:-say Shutting down server}
+      PLAYER_IDLE_TIMEOUT: "${PLAYER_IDLE_TIMEOUT:-10}"
+
+      SERVER_NAME: "${SERVER_NAME:-forhonorhispano}"
+      BUG_REPORT_LINK: "${BUG_REPORT_LINK:-minecraft.forhonorhispano.com}"
+      MANAGEMENT_SERVER_ENABLED: "${MANAGEMENT_SERVER_ENABLED:-true}"
+      MANAGEMENT_SERVER_HOST: "${MANAGEMENT_SERVER_HOST:-minecraft.forhonorhispano.com}"
+      MANAGEMENT_SERVER_PORT: "${MANAGEMENT_SERVER_PORT:-10110}"
+      MANAGEMENT_SERVER_SECRET: "${MANAGEMENT_SERVER_SECRET}"
+    volumes:
+      - "./data:/data"

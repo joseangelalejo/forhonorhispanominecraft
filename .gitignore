@@ -1,0 +1,89 @@
+# ==============================
+# Public-safe ignore rules
+# ==============================
+
+# Secrets and local env
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+
+# Docker local runtime files
+docker-compose.yml
+docker-compose.override.yml
+docker-compose.bak
+docker-compose.yml.save
+!docker-compose.example.yml
+
+# Backups and temp files
+*.bak
+*.backup
+*.old
+*~
+*.swp
+*.swo
+
+# OS and editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# Logs
+logs/
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+
+# Minecraft server runtime/data that should not be public
+data/logs/
+data/crash-reports/
+data/forhonorhispano/
+data/.cache/
+data/.local/
+data/local/
+data/.mixin.out/
+data/.fabric/
+data/libraries/
+data/mods/
+data/versions/
+data/moddata/
+data/modernfix/
+data/stackdeobf_mappings/
+data/fabric-server-*.jar
+data/hs_err_pid*.log
+
+# Player and admin sensitive files
+data/ops.json
+data/whitelist.json
+data/banned-ips.json
+data/banned-players.json
+data/usercache.json
+data/usernamecache.json
+data/server.properties
+data/.rcon-cli.env
+data/.rcon-cli.yaml
+data/.install-fabric.env
+
+# Keep public templates tracked
+!data/.rcon-cli.env.example
+!data/.rcon-cli.yaml.example
+!data/server.properties.example
+!data/.install-fabric.env.example
+
+# Local snapshots
+data-backup/
+data-neoforge/

@@ -53,6 +53,7 @@ env/
 
 # Minecraft server runtime/data that should not be public
 data/logs/
+data/config/
 data/crash-reports/
 data/forhonorhispano/
 data/.cache/

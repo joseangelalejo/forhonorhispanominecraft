@@ -63,13 +63,16 @@ data/local/
 data/.mixin.out/
 data/.fabric/
 data/libraries/
-data/mods/
 data/versions/
 data/moddata/
 data/modernfix/
 data/stackdeobf_mappings/
 data/fabric-server-*.jar
 data/hs_err_pid*.log
+
+# Track mods folder but allow it
+!data/mods/
+!data/mods/*.jar
 
 # Player and admin sensitive files
 data/ops.json

@@ -95,3 +95,8 @@ data/.install-fabric.env
 # Local snapshots
 data-backup/
 data-neoforge/
+
+# BlueMap runtime and generated data
+bluemap/
+!bluemap/config-template/
+!bluemap/CONFIG_SETUP.md

@@ -1,0 +1,19 @@
+# BlueMapp Service Configuration
+# Add this to your docker-compose.yml under the 'services:' section
+
+  bluemap:
+    image: ghcr.io/bluemap-minecraft/bluemap:latest
+    container_name: bluemap
+    restart: always
+    command: -r -u -w
+    ports:
+      - '8100:8100'
+    volumes:
+      - './bluemap/config:/app/config'
+      - './data/forhonorhispano:/app/world'
+      - './bluemap/data:/app/data'
+      - './bluemap/web:/app/web'
+    depends_on:
+      - mc
+    networks:
+      - minecraft-network

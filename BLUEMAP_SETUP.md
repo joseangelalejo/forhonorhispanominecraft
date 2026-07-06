@@ -1,6 +1,7 @@
 # BlueMapp 3D Map Setup
 
 ## Overview
+
 BlueMapp generates a 3D isometric map visualization of your Minecraft world accessible via web interface.
 
 **Access:** http://server-ip:8100
@@ -8,6 +9,7 @@ BlueMapp generates a 3D isometric map visualization of your Minecraft world acce
 ## Configuration
 
 ### Docker Service (docker-compose.yml)
+
 The BlueMapp service is configured in `docker-compose.yml` with:
 - **Image:** `ghcr.io/bluemap-minecraft/bluemap:latest`
 - **Command flags:** `-r -u -w`
@@ -57,17 +59,20 @@ The BlueMapp service is configured in `docker-compose.yml` with:
 ## Configuration Files Reference
 
 ### `core.conf` - Core Settings
+
 - `accept-download: true` - **REQUIRED** - Enables Mojang resource downloads
 - `data: "data"` - Render progress storage
 - `render-thread-count: 1` - CPU threads (adjust based on server load)
 - `scan-for-mod-resources: true` - Load modpack resources
 
 ### `webserver.conf` - Web Server Settings
+
 - `enabled: true` - Enable web interface
 - `port: 8100` - Web server port
 - `webroot: "web"` - Output directory
 
 ### Map Configs (`maps/*.conf`)
+
 Each dimension has a config file:
 - `overworld.conf` - Main world
 - `nether.conf` - Nether dimension
@@ -79,16 +84,19 @@ Each dimension has a config file:
 ## Monitoring Rendering
 
 ### Check logs:
+
 ```bash
 docker compose logs bluemap -f
 ```
 
 ### Watch rendering progress:
+
 ```bash
 watch "du -sh ./bluemap/web/maps/overworld/"
 ```
 
 ### Web tiles directory:
+
 ```bash
 ls -la ./bluemap/web/maps/
 ```
@@ -116,18 +124,22 @@ bluemap/
 ## Troubleshooting
 
 ### "There was an error trying to load this map!"
+
 - Rendering still in progress - wait for tiles to generate
 - Check `bluemap/web/maps/` directory has files
 
 ### Container restart loop
+
 - Verify `accept-download: true` in `core.conf`
 - Check permissions: `chown` and `chmod` fixes
 
 ### High CPU usage
+
 - Reduce `render-thread-count` in `core.conf`
 - Or set to `-1` to auto-calculate based on CPU cores
 
 ## References
+
 - **BlueMap Docs:** https://bluemap.bluecolored.de/wiki/
 - **Docker Setup:** https://github.com/BlueMap-Minecraft/BlueMap/wiki/Docker-Setup
 - **Official Repository:** https://github.com/BlueMap-Minecraft/BlueMap
